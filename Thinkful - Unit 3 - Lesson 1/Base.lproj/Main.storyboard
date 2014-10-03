@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--HOME-->
         <scene sceneID="e0U-2g-Mll">
             <objects>
-                <tabBarController id="hVw-Uw-iIU" sceneMemberID="viewController">
+                <tabBarController title="HOME" id="hVw-Uw-iIU" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="jFE-m1-uY6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -144,12 +144,23 @@
                     <view key="view" contentMode="scaleToFill" id="uGY-U6-nIG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YAJ-TL-eVF">
+                                <rect key="frame" x="100" y="244" width="121" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KWj-jv-7Gd" kind="push" id="4BY-rX-2XG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qh7-Vd-Erv"/>
-                    <connections>
-                        <segue destination="KWj-jv-7Gd" kind="push" id="JxT-95-r5i"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhh-W1-cgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,6 +173,22 @@
                     <view key="view" contentMode="scaleToFill" id="a0u-81-jDa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceImage" id="k7g-mT-Lhq">
+                                <rect key="frame" x="0.0" y="64" width="320" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cvO-Ps-46P">
+                                <rect key="frame" x="86" y="385" width="150" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="SpaceImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cXv-9E-xuQ" kind="push" id="dQE-QW-cEL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="DxY-52-pfl"/>
@@ -169,6 +196,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpM-kp-OGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1710" y="934"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PE7-w4-oX2">
+            <objects>
+                <viewController id="cXv-9E-xuQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vJF-yR-Mjj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wBd-me-Voh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXo-eT-zkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2163" y="934"/>
         </scene>
         <!--Item-->
         <scene sceneID="0pR-Ob-xqU">
@@ -216,6 +258,9 @@
             <point key="canvasLocation" x="1190" y="232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SpaceImage" width="150" height="74"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
